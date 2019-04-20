@@ -12,9 +12,6 @@ public class No {
 	// Altura No
 	private int alturaNo;
 
-	// Profundidade No
-	private int profNo;
-
 	// Chave
 	private int numero;
 
@@ -47,12 +44,6 @@ public class No {
 		this.alturaNo = alturaNo;
 	}
 
-	// Set No com Interface Fluente
-	public No setProf(int p) {
-		this.profNo = p;
-		return this;
-	}
-
 	public int getNumero() {
 		return numero;
 	}
@@ -61,10 +52,6 @@ public class No {
 	public No setNoPai(No no) {
 		this.noPai = no;
 		return this;
-	}
-
-	public int getProf() {
-		return this.profNo;
 	}
 
 	public No getNoPai() {

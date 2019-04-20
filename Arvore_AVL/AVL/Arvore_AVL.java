@@ -18,7 +18,7 @@ public class Arvore_AVL {
 
 		if (this.raiz == null) {
 
-			this.raiz = new No(numero).setNoPai(no).setProf(0);
+			this.raiz = new No(numero).setNoPai(no);
 
 		} else {
 
@@ -154,7 +154,7 @@ public class Arvore_AVL {
 
 				} else {
 
-					no.setDir(new No(numero).setNoPai(no).setProf(no.getProf() + 1));
+					no.setDir(new No(numero).setNoPai(no));
 				}
 
 			} else {
@@ -286,7 +286,7 @@ public class Arvore_AVL {
 
 				} else {
 
-					no.setEsq(new No(numero).setNoPai(no).setProf(no.getProf() + 1));
+					no.setEsq(new No(numero).setNoPai(no));
 				}
 			}
 
@@ -323,18 +323,7 @@ public class Arvore_AVL {
 		aux.setNoPai(no.getNoPai());
 		no.setNoPai(aux);
 		
-		
-		// Update Profundidade NOs
-		no.setProf(aux.getProf());
-		aux.setProf(no.getProf() - 1);
-		
-		if(aux.getEsq() != null) {
-			// Em rotação dupla(direita, esquerda) ocorre a não existência de NO a esquerda
-			aux.getEsq().setProf(no.getProf());
-		}
-
-		
-		
+	//	System.out.println(no.getNumero());
 		
 		// Update Alturas
 		no.setAlturaNo(Math.max(this.calAltura(no.getEsq()), this.calAltura(no.getDir())) + 1);
@@ -354,17 +343,7 @@ public class Arvore_AVL {
 		// Update NOs Pai
 		aux.setNoPai(no.getNoPai());
 		no.setNoPai(aux);
-		
-		// Update Profundidade NOs
-		no.setProf(aux.getProf());
-		aux.setProf(no.getProf() - 1);
-		
-		if(aux.getDir() != null) {
-			// Em rotação dupla(esquerda, direita) ocorre a não existência de NO a direita
-			aux.getDir().setProf(no.getProf());
-		}
-		
-
+	
 		// Update Alturas
 		no.setAlturaNo(Math.max(this.calAltura(no.getEsq()), this.calAltura(no.getDir())) + 1);
 		aux.setAlturaNo(Math.max(no.getAlturaNo(), this.calAltura(aux.getDir())) + 1);
@@ -375,7 +354,7 @@ public class Arvore_AVL {
 
 	public void exibirAVL() {
 
-		this.exibirAVL(this.raiz);
+		this.exibirAVL(this.raiz, 0);
 	}
 
 	private int calAltura(No no) {
@@ -387,14 +366,14 @@ public class Arvore_AVL {
 		return no.getAlturaNo();
 	}
 
-	private void exibirAVL(No no) {
+	private void exibirAVL(No no, int esp) {
 
 		if (no != null) {
 
-			System.out.println(" " + this.espaco(no.getProf()) + no.getNumero() + " -> Altura: " + no.getAlturaNo());
+			System.out.println(" " + this.espaco(esp) + no.getNumero() + " -> Altura: " + no.getAlturaNo());
 			
-			this.exibirAVL(no.getDir());
-			this.exibirAVL(no.getEsq());
+			this.exibirAVL(no.getDir(), esp + 1);
+			this.exibirAVL(no.getEsq(), esp + 1);
 		}
 
 	}
