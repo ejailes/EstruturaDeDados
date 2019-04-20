@@ -73,8 +73,8 @@ public class Arvore_AVL {
 								
 								/*
 								 * 
-								 * 				[x] -> NO_PAI RAIZ(raiz da arvore)
-								 * 				 |
+								 * 	        [x] -> NO_PAI RAIZ(raiz da arvore)
+								 * 	         |
 								 *           -----
 								 *           |
 								 *          [x] -> NO DESBALANCEADO
@@ -83,9 +83,9 @@ public class Arvore_AVL {
 								 *           	 [x]
 								 *           	  |
 								 *           	  -----
-								 *           		  |
-								 *           		 [x] -> INSERÇÃO A DIREITA DA SUB_ARVORE
-								 *           				A DIRETA, A ESQUERDA DO NO_PAI RAIZ
+								 *           	      |
+								 *           	     [x] -> INSERÇÃO A DIREITA DA SUB_ARVORE
+								 *           		    A DIRETA, A ESQUERDA DO NO_PAI RAIZ
 								 * 
 								 */
 								
@@ -132,8 +132,8 @@ public class Arvore_AVL {
 								
 								/*
 								 * 
-								 * 				[x] -> NO_PAI RAIZ(raiz da arvore)
-								 * 				 |
+								 * 	        [x] -> NO_PAI RAIZ(raiz da arvore)
+								 * 	         |
 								 *           -----
 								 *           |
 								 *          [x] -> NO DESBALANCEADO
@@ -209,8 +209,8 @@ public class Arvore_AVL {
 								
 								/*
 								 * 
-								 * 				[x] -> NO_PAI RAIZ(raiz da arvore)
-								 * 				 |
+								 * 	        [x] -> NO_PAI RAIZ(raiz da arvore)
+								 * 		 |
 								 *               -----
 								 *                   |
 								 *                  [x] -> NO DESBALANCEADO
@@ -265,8 +265,8 @@ public class Arvore_AVL {
 								
 								/*
 								 * 
-								 * 		[x] -> NO_PAI RAIZ(raiz da arvore)
-								 * 		 |
+								 *      [x] -> NO_PAI RAIZ(raiz da arvore)
+								 * 	 |
 								 *       -----
 								 *           |
 								 *          [x] -> NO DESBALANCEADO
