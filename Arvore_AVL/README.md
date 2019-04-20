@@ -1,0 +1,1 @@
+Árvore AVL é uma árvore binária de busca balanceada.
