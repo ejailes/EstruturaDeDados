@@ -11,13 +11,12 @@ public class Arvore_AVL {
 	public void setNumeroAVL(int numero) {
 
 		this.setNumeroAVL(this.raiz, numero);
-
 	}
 
 	private void setNumeroAVL(No no, int numero) {
 
 		if (this.raiz == null) {
-
+			
 			this.raiz = new No(numero).setNoPai(no);
 
 		} else {
@@ -311,24 +310,22 @@ public class Arvore_AVL {
 	}
 
 	private No rotacaoDireita(No no) {
-	
 		
 		// Rotação direita
 		No aux = no.getEsq();
 		no.setEsq(aux.getDir());
 		aux.setDir(no);
-		
-		
+	
 		// Update NOs Pai
 		aux.setNoPai(no.getNoPai());
 		no.setNoPai(aux);
-		
-	//	System.out.println(no.getNumero());
+		if(no.getEsq() != null) {
+			no.getEsq().setNoPai(no);
+		}
 		
 		// Update Alturas
 		no.setAlturaNo(Math.max(this.calAltura(no.getEsq()), this.calAltura(no.getDir())) + 1);
 		aux.setAlturaNo(Math.max(this.calAltura(no.getEsq()), no.getAlturaNo()) + 1);
-		
 		
 		return aux;
 	}
@@ -343,7 +340,10 @@ public class Arvore_AVL {
 		// Update NOs Pai
 		aux.setNoPai(no.getNoPai());
 		no.setNoPai(aux);
-	
+		if(no.getDir() != null) {
+			no.getDir().setNoPai(no);	
+		}
+		
 		// Update Alturas
 		no.setAlturaNo(Math.max(this.calAltura(no.getEsq()), this.calAltura(no.getDir())) + 1);
 		aux.setAlturaNo(Math.max(no.getAlturaNo(), this.calAltura(aux.getDir())) + 1);
@@ -370,10 +370,14 @@ public class Arvore_AVL {
 
 		if (no != null) {
 
-			System.out.println(" " + this.espaco(esp) + no.getNumero() + " -> Altura: " + no.getAlturaNo());
+			// GetNoPai
+			int x = no.getNoPai() == null ? 0 : no.getNoPai().getNumero();
+			
+			System.out.println(" " + this.espaco(esp) + no.getNumero() + " -> Altura: " + no.getAlturaNo() + "| NO PAI -> " + x);
 			
 			this.exibirAVL(no.getDir(), esp + 1);
 			this.exibirAVL(no.getEsq(), esp + 1);
+			
 		}
 
 	}
