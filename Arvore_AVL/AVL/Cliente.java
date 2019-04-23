@@ -22,6 +22,8 @@ public class Cliente {
 
 		
 		avl.exibirAVL();
+		
+		avl.buscaBinaria(40);
 
 		
 	}
