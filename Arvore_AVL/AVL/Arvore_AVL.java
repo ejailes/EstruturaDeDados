@@ -294,6 +294,43 @@ public class Arvore_AVL {
 		}
 
 	}
+	
+	public void buscaBinaria(int numero) {
+		
+		No no = buscaBinaria(this.raiz, numero);
+		
+		if(no != null) {
+			System.out.println("Numero " + no.getNumero() + " encontrado");
+		} else {
+			System.out.println("Numero não existe na Árvore AVL");
+		}
+		
+	}
+
+	private No buscaBinaria(No no, int numero) {
+		
+		if(this.raiz != null) {
+			
+			if(numero == no.getNumero()) {
+				return no;
+			} else {
+				
+				if(numero > no.getNumero()) {
+					if(no.getDir() != null) {
+						return buscaBinaria(no.getDir(), numero);
+					}
+				} else {
+					
+					if(no.getEsq() != null) {
+						 return buscaBinaria(no.getEsq(), numero);
+					}
+				}
+			}
+			
+			
+		}
+		return null;
+	}
 
 	private No rotacaoEsquerdaDireita(No no) {
 		
