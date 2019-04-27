@@ -1,40 +1,26 @@
-package arvore.naria;
-
 public class Cliente {
 
 	public static void main(String[] args) {
 
-		Arvore_naria n = new Arvore_naria("Como Ser Um Mestre Pokémon");
+		Arvore_naria n = new Arvore_naria("Como Ser Um Mestre PokÃ©mon");
 		
-		n.setConteudo("Como Ser Um Mestre Pokémon", "Compre um console");
+		n.setConteudo("Como Ser Um Mestre PokÃ©mon", "Compre um console");
 		
 		n.setConteudo("Compre um console", "Nintendo DS");
 		n.setConteudo("Compre um console", "3DS");
 		n.setConteudo("Compre um console", "Gameboy");
-		n.setConteudo("Nintendo DS", "jogue pokémon diamond");
-		n.setConteudo("3DS", "jogue pokémon crystal");
-		n.setConteudo("Gameboy", "jogue pokémon firered");
-		n.setConteudo("jogue pokémon firered", "Realize as missões do jogo");
-		n.setConteudo("jogue pokémon crystal", "Realize as missões do jogo");
-		n.setConteudo("jogue pokémon diamond", "Realize as missões do jogo");
+		n.setConteudo("Nintendo DS", "jogue pokÃ©mon diamond");
+		n.setConteudo("3DS", "jogue pokÃ©mon crystal");
+		n.setConteudo("Gameboy", "jogue pokÃ©mon firered");
+		n.setConteudo("jogue pokÃ©mon firered", "Realize as missÃµes do jogo");
+		n.setConteudo("jogue pokÃ©mon crystal", "Realize as missÃµes do jogo");
+		n.setConteudo("jogue pokÃ©mon diamond", "Realize as missÃµes do jogo");
 		
-		n.setConteudo("Como Ser Um Mestre Pokémon", "Dicas");
-		n.setConteudo("Dicas", "Capture todos os pokémons que você puder");
-		n.setConteudo("Dicas", "Nunca se terá um time imbatível");
-		n.setConteudo("Dicas", "Não se gabe do quanto você é bom");
-		
-		
-		
-		
-		
-		
-		
-		
-
-		
+		n.setConteudo("Como Ser Um Mestre PokÃ©mon", "Dicas");
+		n.setConteudo("Dicas", "Capture todos os pokÃ©mons que vocÃª puder");
+		n.setConteudo("Dicas", "Nunca se terÃ¡ um time imbatÃ­vel");
+		n.setConteudo("Dicas", "NÃ£o se gabe do quanto vocÃª Ã© bom");
 	
-		
-		
 		n.exibirArvore();
 
 	}
