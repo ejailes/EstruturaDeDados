@@ -1,5 +1,3 @@
-package Arvore.AVL;
-
 public class Arvore_AVL {
 
 	private No raiz;
