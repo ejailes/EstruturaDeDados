@@ -1,5 +1,3 @@
-package arvore.naria;
-
 public class No {
 
 	// Ponteiros
@@ -7,13 +5,17 @@ public class No {
 	private No prox_irmao;
 
 	/*
-	 * Outra forma de exibição em profundidade é criar um atributo profundidade
+	 * Outra forma de exibiÃ§Ã£o em profundidade Ã© criar um atributo profundidade
 	 * na classe NO quando for criar um novo NO prim_filho ou prox_irmao set a
 	 * profundidade.
 	 */
 
 	private String chave;
 
+	public No(String chave) {
+		this.chave = chave;
+	}
+	
 	public No getPrim_filho() {
 		return prim_filho;
 	}
@@ -32,10 +34,6 @@ public class No {
 
 	public String getChave() {
 		return chave;
-	}
-
-	public No(String chave) {
-		this.chave = chave;
 	}
 
 }
