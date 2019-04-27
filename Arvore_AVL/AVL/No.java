@@ -1,5 +1,3 @@
-package Arvore.AVL;
-
 public class No {
 
 	// Ponteiros, esquerda, direita
