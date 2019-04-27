@@ -1,0 +1,1 @@
+Árvore N-ária é uma árvore com N filhos tamanho arbitrário.
