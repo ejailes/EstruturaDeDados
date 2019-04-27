@@ -1,5 +1,3 @@
-package arvore.naria;
-
 public class Arvore_naria {
 
 	private No raiz;
@@ -16,7 +14,7 @@ public class Arvore_naria {
 			this.setConteudo(no, valor);
 
 		} else {
-			System.out.println("Chave n„o existe");
+			System.out.println("Chave n√£o existe");
 		}
 	}
 
