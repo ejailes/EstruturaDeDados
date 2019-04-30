@@ -23,7 +23,7 @@ public class Arvore_AVL {
 
 				if (no.getDir() != null) {
 
-					this.setNumeroAVL(no.getDir().setNoPai(no), numero);
+					this.setNumeroAVL(no.getDir(), numero);
 
 					// Verificar se ocorreu desbalanceamento
 					if (this.calAltura(no.getEsq()) - this.calAltura(no.getDir()) == -2) {
@@ -35,8 +35,8 @@ public class Arvore_AVL {
 
 							No aux = this.rotacaoEsquerda(no);
 
-							// Quando desbalanceamento ocorrer a direta da subArvore
-							// a direita, NO RAIZ DA ARVORE
+							// Quando desbalanceamento ocorrer no NO RAIZ, inserção a direta da subArvore
+							// a direita.
 							if(noPai == null) {
 								
 								this.raiz = aux;
@@ -94,8 +94,8 @@ public class Arvore_AVL {
 							
 							No aux = this.rotacaoDireitaEsquerda(no);
 							
-							// Quando desbalanceamento ocorrer a esquerda da subArvore
-							// a direita, NO RAIZ DA ARVORE
+							// Quando desbalanceamento ocorrer no NO RAIZ DA ARVORE, inserção a esquerda da subArvore
+							// a direita. 
 							if(noPai == null) {
 								
 								this.raiz = aux;
@@ -158,7 +158,7 @@ public class Arvore_AVL {
 
 				if (no.getEsq() != null) {
 
-					this.setNumeroAVL(no.getEsq().setNoPai(no), numero);
+					this.setNumeroAVL(no.getEsq(), numero);
 					
 					// Verificar se ocorreu desbalanceamento
 					if(this.calAltura(no.getEsq()) - this.calAltura(no.getDir()) == 2) {
@@ -169,8 +169,8 @@ public class Arvore_AVL {
 							
 							No aux = this.rotacaoDireita(no);
 			
-							// Quando desbalanceamento ocorrer a esquerda da subArvore
-							// a esquerda NO RAIZ DA ARVORE
+							// Quando desbalanceamento ocorrer no NO RAIZ DA ARVORE, inserção a esquerda da subArvore
+							// a esquerda.
 							if(noPai == null) {
 								
 								this.raiz = aux;
@@ -228,8 +228,8 @@ public class Arvore_AVL {
 							
 							No aux = this.rotacaoEsquerdaDireita(no);
 							
-							// Quando desbalanceamento ocorrer a direta da subArvore
-							// a esquerda, NO RAIZ DA ARVORE
+							// Quando desbalanceamento ocorrer no NO RAIZ DA ARVORE, inserção a direta da subArvore
+							// a esquerda.
 							if(noPai == null) {
 								
 								this.raiz = aux;
@@ -307,7 +307,7 @@ public class Arvore_AVL {
 
 	private No buscaBinaria(No no, int numero) {
 		
-		if(this.raiz != null) {
+		if(no != null) {
 			
 			if(numero == no.getNumero()) {
 				return no;
