@@ -1,15 +1,16 @@
-package matrizAdj;
+package matriz.dinamica;
 
 public class Vertice {
 
-	private String Valor;
+	private String valor;
 
-	public Vertice(String v) {
-		this.Valor = v;
+	public Vertice(String valor) {
+
+		this.valor = valor;
 	}
 
 	public String getValor() {
-		return Valor;
+		return this.valor;
 	}
 
 }

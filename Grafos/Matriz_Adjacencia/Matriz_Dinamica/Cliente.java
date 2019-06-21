@@ -1,23 +1,20 @@
-package matrizAdj;
+package matriz.dinamica;
 
 public class Cliente {
 
 	public static void main(String[] args) {
-	
-		Vertice[] v = new Vertice[5]; 
-		Grafo g = new Grafo();
-		
-		v[0] = g.criarVertice("v0");
-		v[1] = g.criarVertice("v1");
-		v[2] = g.criarVertice("v2");
-		v[3] = g.criarVertice("v3");
-		v[4] = g.criarVertice("v4");
-		
-		System.out.println(v[0].getValor());
-		
 
-		
-		
+		Grafo grafo = new Grafo();
+
+		Vertice v0 = grafo.criarVertice("v0");
+		Vertice v1 = grafo.criarVertice("v1");
+		Vertice v2 = grafo.criarVertice("v2");
+
+		grafo.criarAresta(v0, v2);
+		grafo.criarAresta(v1, v2);
+		// grafo.removerAresta(v1, v2);
+
+		grafo.exibirMatriz();
 
 	}
 
