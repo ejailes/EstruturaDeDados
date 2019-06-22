@@ -1,5 +1,3 @@
-package matriz.array;
-
 public class MatrizArray {
 
 	// Matriz binaria
@@ -22,12 +20,12 @@ public class MatrizArray {
 
 		/*
 		 * 
-		 * Para expandir uma matriz de array È necess·rio criar a nova matriz expandida,
-		 * depois percorrer todas as posiÁıes da antiga matriz, passando os antigos
+		 * Para expandir uma matriz de array √© necess√°rio criar a nova matriz expandida,
+		 * depois percorrer todas as posi√ß√µes da antiga matriz, passando os antigos
 		 * valores para a matriz expandida.
 		 * 
-		 * Necess·rio percorrer a antiga matriz para n„o perde as conexıes
-		 * binaria(Aresta) (1 conectado) (0 n„o conectado).
+		 * Necess√°rio percorrer a antiga matriz para n√£o perde as conex√µes
+		 * binaria(Aresta) (1 conectado) (0 n√£o conectado).
 		 * 
 		 */
 
