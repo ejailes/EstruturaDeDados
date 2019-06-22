@@ -1,5 +1,3 @@
-package matriz.dinamica;
-
 public class Vertice {
 
 	private String valor;
