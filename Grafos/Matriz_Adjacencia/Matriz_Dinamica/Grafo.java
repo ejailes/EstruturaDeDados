@@ -1,5 +1,3 @@
-package matriz.dinamica;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -32,7 +30,7 @@ public class Grafo {
 
 		} else {
 
-			System.err.print("Erro ao realização operação: Criar Vertice\n");
+			System.err.print("Erro ao realizaÃ§Ã£o operaÃ§Ã£o: Criar Vertice\n");
 
 		}
 
@@ -49,7 +47,7 @@ public class Grafo {
 			
 		} else {
 			
-			System.err.print("Erro ao realização operação: Remover Vertice\n");
+			System.err.print("Erro ao realizaÃ§Ã£o operaÃ§Ã£o: Remover Vertice\n");
 		}
 
 	}
@@ -75,16 +73,16 @@ public class Grafo {
 			for (int j = 0; j < tamanho; j++) {
 
 				/*
-				 * Função para inserir valor padrão não conectado (Ex: -1, -10, 999)
+				 * FunÃ§Ã£o para inserir valor padrÃ£o nÃ£o conectado (Ex: -1, -10, 999)
 				 * 
-				 * Esta função vai preencher toda a matriz nos pontos não conectados com valor
-				 * padrão definido, consumindo mais memória, e perdendo um dos objetivo da
-				 * estrutura matriz dinâmica.
+				 * Esta funÃ§Ã£o vai preencher toda a matriz nos pontos nÃ£o conectados com valor
+				 * padrÃ£o definido, consumindo mais memÃ³ria, e perdendo um dos objetivo da
+				 * estrutura matriz dinÃ¢mica.
 				 * 
-				 * Caso necessário preencher todas as posições de uma matriz, utilizar matriz
-				 * estática (Matriz de Array)
+				 * Caso necessÃ¡rio preencher todas as posiÃ§Ãµes de uma matriz, utilizar matriz
+				 * estÃ¡tica (Matriz de Array)
 				 * 
-				 * Preenchendo todas a posições não conectados com -1
+				 * Preenchendo todas a posiÃ§Ãµes nÃ£o conectados com -1
 				 * 
 				 * this.carregarValorNaoConectado(i, j, -1);
 				 * System.out.print((this.matriz.getMatriz(i, j) != null) ? 1 : 0 + "  ");
@@ -100,7 +98,7 @@ public class Grafo {
 		}
 	}
 
-	// Função para inserir valor padrão não conectado
+	// FunÃ§Ã£o para inserir valor padrÃ£o nÃ£o conectado
 	private void carregarValorNaoConectado(int linha, int coluna, int valorDefaultNaoConectado) {
 
 		if (this.matriz.getMatriz(linha, coluna) == null) {
