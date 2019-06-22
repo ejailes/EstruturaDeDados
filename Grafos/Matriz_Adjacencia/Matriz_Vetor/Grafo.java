@@ -1,5 +1,3 @@
-package matriz.array;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -37,7 +35,7 @@ public class Grafo {
 
 		} catch (Exception e) {
 
-			System.err.print("Erro ao realização operação: Criar Vertice\n");
+			System.err.print("Erro ao realizaÃ§Ã£o operaÃ§Ã£o: Criar Vertice\n");
 		}
 
 	}
@@ -53,7 +51,7 @@ public class Grafo {
 
 		} catch (Exception e) {
 
-			System.err.print("Erro ao realização operação: Remover Vertice\\n");
+			System.err.print("Erro ao realizaÃ§Ã£o operaÃ§Ã£o: Remover Vertice\\n");
 		}
 
 	}
