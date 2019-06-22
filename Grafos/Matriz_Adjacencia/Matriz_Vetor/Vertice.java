@@ -1,5 +1,3 @@
-package matriz.array;
-
 public class Vertice {
 
 	private String valor;
