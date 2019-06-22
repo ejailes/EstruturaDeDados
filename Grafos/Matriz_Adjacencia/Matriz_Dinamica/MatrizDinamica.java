@@ -1,11 +1,9 @@
-package matriz.dinamica;
-
 import java.util.HashMap;
 import java.util.Map;
 
 public class MatrizDinamica {
 
-	// Matriz Din‚mica
+	// Matriz Din√¢mica
 	private Map<Integer, Map<Integer, Integer>> matriz;
 
 	public MatrizDinamica() {
@@ -17,8 +15,8 @@ public class MatrizDinamica {
 
 		Map<Integer, Integer> mapInterna = getMapInterno(linha);
 
-		// Se houver conex„o adicione na matriz, se n„o remova da matriz; 
-		// Valor padr„o para remove conex„o È 0(valor alter·vel)
+		// Se houver conex√£o adicione na matriz, se n√£o remova da matriz; 
+		// Valor padr√£o para remove conex√£o √© 0(valor alter√°vel)
 		if (conexao != 0) {
 
 			mapInterna.put(coluna, conexao);
